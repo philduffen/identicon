@@ -9,7 +9,6 @@ defmodule Identicon do
   def build_grid(%Identicon.Image{hex: hex} = image) do
   	hex
   	|> Enum.chunk_every(3, 3, :discard)
-  	# |> Enum.reverse
   end
 
   def pick_colour(%Identicon.Image{hex: [r, g, b | _tail ]} = image) do
